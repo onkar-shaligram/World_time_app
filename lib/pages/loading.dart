@@ -16,7 +16,8 @@ class _LoadingState extends State<Loading> {
     Navigator.pushReplacementNamed(context, '/home', arguments: {
               'location': instance.location,
               'flag': instance.flag,
-              'time': instance.time
+              'time': instance.time,
+              'isDayTime' : instance.isDayTime
             });
   }
 
@@ -29,12 +30,16 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
+
+    
+
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Center(
         child: SpinKitCubeGrid(
             color: Colors.blue,
-            size: 50.0,
+            size: 80.0,
           ),
       ),
     );

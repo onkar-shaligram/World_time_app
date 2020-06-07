@@ -17,12 +17,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
         elevation: 10.0,
       ),
       body: Container(
-        child: FlatButton.icon(
-          onPressed: () {
-             Navigator.pushNamed(context, '/loading');
-          }, 
-          icon: Icon(Icons.assessment), 
-          label: Text('Loading')),
+        
       ),
     );
   }

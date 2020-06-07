@@ -8,6 +8,7 @@ class WorldTime {
     String url;
     String flag;
     String location;
+    bool isDayTime;
 
     WorldTime({this.location, this.flag, this.url});
 
@@ -33,11 +34,15 @@ try {
 
     // set the time property
     time = DateFormat.jm().format(now);
+    isDayTime = now.hour>3 && now.hour<6 ? true : false;
+
   }
    catch (e) {
     print('ERROR : $e');
     time = 'Data not found';
   }
+
+  
    
      }
 }
